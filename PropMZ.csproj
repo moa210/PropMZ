@@ -6,16 +6,39 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true"/>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Font.Awesome" Version="5.15.4"/>
-        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.22"/>
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.22"/>
-        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.22"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.22"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.22"/>
+        <PackageReference Include="Font.Awesome" Version="5.15.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.22" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.22" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.22" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.22" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.22" />
+        <PackageReference Include="SendGrid" Version="9.25.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="WebPWrecover\Areas\Identity\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Shared\_LoginPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\Shared\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\appsettings.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net5.0\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net5.0\appsettings.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net5.0\WebPWrecover.deps.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net5.0\WebPWrecover.runtimeconfig.dev.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\bin\Debug\net5.0\WebPWrecover.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\obj\WebPWrecover.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="WebPWrecover\Properties\launchSettings.json" />
     </ItemGroup>
 
 </Project>
