@@ -1,6 +1,6 @@
 ﻿namespace PropMZ
 {
-    using Data;
+    using Areas.Identity.Data;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
@@ -9,13 +9,14 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Models;
     using Services;
 
     public class Startup
     {
         public Startup(IConfiguration configuration) => Configuration = configuration;
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -24,16 +25,18 @@
                                                                 options.UseSqlite(
                                                                         Configuration.GetConnectionString(
                                                                                 "DefaultConnection")));
+            // services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //         .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ApplicationDbContext>();
+                    .AddEntityFrameworkStores<PropMzIdentityDbContext>();
             services.AddControllersWithViews();
-            
+
             // requires
             // using Microsoft.AspNetCore.Identity.UI.Services;
             // using PropMZ.Services;
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
-            
+
             services.AddRazorPages();
         }
 
