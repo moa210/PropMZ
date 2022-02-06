@@ -89,3 +89,9 @@ body h1, h2, h3, h4 {
 .bg-lint {
     background-color: #D7DFB8 !important;
 }
+
+.flex-container-btn {
+    display: flex;
+    justify-content: space-between;
+    
+}

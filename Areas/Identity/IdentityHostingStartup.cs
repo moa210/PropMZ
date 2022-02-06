@@ -18,10 +18,13 @@ namespace PropMZ.Areas.Identity
         public void Configure(IWebHostBuilder builder) =>
                 builder.ConfigureServices((context, services) =>
                                           {
+                                              // services.AddDbContext<PropMzIdentityDbContext>(options =>
+                                              //         options.UseSqlServer(
+                                              //                 context.Configuration.GetConnectionString(
+                                              //                         "PropMZIdentityDbContextConnection")));
+                                              var connection = @"Server=localhost;Database=mssql;User=moa210;Password=Passw0rd!";
                                               services.AddDbContext<PropMzIdentityDbContext>(options =>
-                                                      options.UseSqlServer(
-                                                              context.Configuration.GetConnectionString(
-                                                                      "PropMZIdentityDbContextConnection")));
+                                                     options.UseSqlServer(connection));
                                           });
         #endregion
 
