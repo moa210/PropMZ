@@ -4,9 +4,9 @@ namespace PropMZ.Areas.Identity.Data
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
 
-    public class PropMzIdentityDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationIdentityDbContext : IdentityDbContext<IdentityUser>
     {
-        public PropMzIdentityDbContext(DbContextOptions<PropMzIdentityDbContext> options)
+        public ApplicationIdentityDbContext(DbContextOptions<ApplicationIdentityDbContext> options)
                 : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder) => base.OnModelCreating(builder);
