@@ -71,10 +71,8 @@ namespace PropMZ.Areas.Identity.Pages.Account
                                                       $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
                         return RedirectToPage("RegisterConfirmation",
                                               new { email = Input.Email, returnUrl });
-                    }
 
                     await _signInManager.SignInAsync(user, false);
                     return LocalRedirect(returnUrl);

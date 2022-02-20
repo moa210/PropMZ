@@ -1,6 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.text-coral {
+    color: #FC5B3F;
+}
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -57,21 +61,11 @@ html {
     min-height: 100%;
 }
 
-/*body {*/
-/*    !* Margin bottom by footer height *!*/
-/*    margin-bottom: 60px;*/
-/*    font-family: 'Source Sans Pro', sans-serif;*/
-/*}*/
-
-/*body h1, h2, h3, h4 {*/
-/*    font-family: 'Playfair Display', serif;*/
-/*}*/
-
 body {
-    /* Margin bottom by footer height */
+    /*margin size of a footer
+    -------------------------------------------------- */
     margin-bottom: 60px;
     font-family: 'Space Mono', sans-serif;
-    
 }
 
 body h1, h2, h3, h4 {
@@ -86,22 +80,9 @@ body h1, h2, h3, h4 {
     line-height: 60px; /* Vertically center the text there */
 }
 
-/*.bg-image {*/
-/*    background-image: url('assets/grafika-bckgr-indx-1.png');*/
-/*}*/
 .bg-image {
     background-image: linear-gradient(to right, #111010, #2E2E34)
 }
-/*.bg-image {*/
-/*    background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(90deg, rgb(195, 195, 195), rgb(228, 228, 228));*/
-/*    background-blend-mode: overlay, overlay, overlay, normal;*/
-/*}*/
-
-/*.bg-image {*/
-/*    background-image: linear-gradient(112.5deg, rgb(21, 21, 21) 0%, rgb(21, 21, 21) 10%, rgb(19, 19, 19) 10%, rgb(19, 19, 19) 53%, rgb(76, 76, 76) 53%, rgb(76, 76, 76) 55%, rgb(57, 57, 57) 55%, rgb(57, 57, 57) 60%, rgb(37, 37, 37) 60%, rgb(37, 37, 37) 88%, rgb(18, 18, 18) 88%, rgb(18, 18, 18) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(21, 21, 21) 0%, rgb(21, 21, 21) 10%, rgb(95, 95, 95) 10%, rgb(95, 95, 95) 53%, rgb(76, 76, 76) 53%, rgb(76, 76, 76) 55%, rgb(57, 57, 57) 55%, rgb(57, 57, 57) 60%, rgb(37, 37, 37) 60%, rgb(37, 37, 37) 88%, rgb(11, 11, 11) 88%, rgb(11, 11, 11) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(21, 21, 21) 0%, rgb(21, 21, 21) 10%, rgb(19, 15, 19) 10%, rgb(19, 19, 19) 53%, rgb(76, 76, 76) 53%, rgb(76, 76, 76) 55%, rgb(57, 57, 57) 55%, rgb(57, 57, 57) 60%, rgb(17, 13, 13) 60%, rgb(17, 13, 13) 88%, rgb(11, 11, 11) 88%, rgb(11, 11, 11) 91%, rgb(9, 9, 9) 91%, rgb(9, 9, 9) 100%), linear-gradient(90deg, rgb(19, 19, 19), rgb(22, 22, 22));*/
-/*    background-blend-mode: overlay, overlay, overlay, normal;*/
-/*}*/
-
 
 .logo-img-m {
     max-height: 2rem;
@@ -122,10 +103,14 @@ body h1, h2, h3, h4 {
 }
 
 .space-keeper {
-    position: relative;
-    color: white;
-    min-height: 400px;
-    text-align: center;
+    color: #b4b4b4;
+    min-height: 200px;
+    max-width: 100%;
+}
+
+.images-dimmed img{
+    filter: brightness(95%);
+    opacity: 0.9;
 }
 
 .ind-graphics-bckg {
@@ -133,32 +118,59 @@ body h1, h2, h3, h4 {
     height: 600px;
     padding: 0;
     margin: 0;
-    filter: blur(2px);
+    filter: blur(3px);
     opacity: 0.5;
 }
 
+.images-dao {
+    max-width: 200px;
+}
+
+/*Q&A css set
+--------------------------------------------------*/
+.bottom-brd-coral {
+    border-bottom: 1px solid rgba(255, 127, 80, 0.35);
+}
+
+label {
+    color: #f05742;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label:hover {
+    color: rgba(240, 87, 66, 0.75);
+    text-decoration: none;
+}
+
+.bg-v-dark {
+    background-color: black;
+    opacity: 0.6;
+}
+
+/*expandables*/
 #expand1 {
-    display:none;
+    display: none;
 }
 
 #expand1 + .smalldesc {
-    max-height:20px;
-    overflow:hidden;
-    transition:all 1s ease;
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
 }
 
 #expand1:checked + .smalldesc {
-    max-height:300px;
+    max-height: fit-content;
 }
 
 #expand2 {
-    display:none;
+    display: none;
 }
 
 #expand2 + .smalldesc {
-    max-height:20px;
-    overflow:hidden;
-    transition:all 1s ease;
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
 }
 
 #expand2:checked + .smalldesc {
@@ -166,31 +178,141 @@ body h1, h2, h3, h4 {
 }
 
 #expand3 {
-    display:none;
+    display: none;
 }
 
 #expand3 + .smalldesc {
-    max-height:20px;
-    overflow:hidden;
-    transition:all 1s ease;
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
 }
 
 #expand3:checked + .smalldesc {
-    max-height:300px;
+    max-height: 300px;
 }
 
-label {
-    color: #f05742;
-    text-decoration:none;
-    cursor:pointer;
+#expand4 {
+    display: none;
 }
 
-label:hover {
-    color: rgba(240, 87, 66, 0.75);
-    text-decoration:none;
+#expand4 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
 }
 
-.bg-v-dark {
-    background-color: black;
-    opacity: 0.6;
+#expand4:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand5 {
+    display: none;
+}
+
+#expand5 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand5:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand6 {
+    display: none;
+}
+
+#expand6 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand6:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand7 {
+    display: none;
+}
+
+#expand7 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand7:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand8 {
+    display: none;
+}
+
+#expand8 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand8:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand9 {
+    display: none;
+}
+
+#expand9 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand9:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand10 {
+    display: none;
+}
+
+#expand10 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand10:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand11 {
+    display: none;
+}
+
+#expand11 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand11:checked + .smalldesc {
+    max-height: 300px;
+}
+
+#expand12 {
+    display: none;
+}
+
+#expand12 + .smalldesc {
+    max-height: 20px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#expand12:checked + .smalldesc {
+    max-height: 300px;
 }
