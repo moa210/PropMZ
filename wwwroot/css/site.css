@@ -1,9 +1,30 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+body {
+    /*margin size of a footer
+    -------------------------------------------------- */
+    margin-bottom: 60px;
+    font-family: 'Space Mono', sans-serif;
+}
+
+body h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', serif;
+}
+
+html {
+    font-size: 14px;
+}
+
 .text-coral {
     color: #FC5B3F;
 }
+
+.front-text {
+    font-size: 1.15rem;
+    padding: 1.25rem;
+}
+
 
 a.navbar-brand {
     white-space: normal;
@@ -11,13 +32,39 @@ a.navbar-brand {
     word-break: break-all;
     font-weight: 600 !important;
     color: #f05742 !important;
+
+}
+
+/*front index page (slogan) size adjustment*/
+
+@media only screen and (max-width: 600px) {
+    .dynamic-height {
+        height: calc(100vh - 80px);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .dynamic-height {
+        height: calc(100vh - 200px);
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .dynamic-height {
+        height: calc(100vh - 120px);
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1199px) {
+    .dynamic-height {
+        height: calc(100vh - 160px);
+    }
 }
 
 /* Provide sufficient contrast against white background */
 a {
     color: #f05742;
 }
-
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
@@ -27,9 +74,6 @@ a {
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-    font-size: 14px;
-}
 
 @media (min-width: 768px) {
     html {
@@ -59,17 +103,6 @@ button.accept-policy {
 html {
     position: relative;
     min-height: 100%;
-}
-
-body {
-    /*margin size of a footer
-    -------------------------------------------------- */
-    margin-bottom: 60px;
-    font-family: 'Space Mono', sans-serif;
-}
-
-body h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', serif;
 }
 
 .footer {
@@ -108,7 +141,7 @@ body h1, h2, h3, h4 {
     max-width: 100%;
 }
 
-.images-dimmed img{
+.images-dimmed img {
     filter: brightness(95%);
     opacity: 0.9;
 }
@@ -123,11 +156,16 @@ body h1, h2, h3, h4 {
 }
 
 .images-dao {
-    max-width: 200px;
+    /*max-width: 200px;*/
 }
 
 /*Q&A css set
 --------------------------------------------------*/
+
+.font16 {
+    font-weight: bold;
+}
+
 .bottom-brd-coral {
     border-bottom: 1px solid rgba(255, 127, 80, 0.35);
 }
@@ -148,7 +186,8 @@ label:hover {
     opacity: 0.6;
 }
 
-/*expandables*/
+/*expandables, question and answers index part*/
+
 #expand1 {
     display: none;
 }
